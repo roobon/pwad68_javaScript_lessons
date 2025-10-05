@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #display {
+            width: 80px;
+            height: 20px;
+            background-color: aqua;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Calculator</h3>
+    
+   <script>
+        function SumFunc(x, y){
+          let z;
+          x =  prompt("Enter first number");
+          y =  prompt("Enter second number");
+          x = parseInt(x);
+          y = parseInt(y);
+          z = x + y;
+          document.getElementById("display").innerHTML = "Total is: " +  z;
+          
+        }
+
+         function MultiplyFunc(x, y){
+          x =  prompt("Enter first number");
+          y =  prompt("Enter second number");
+        //   x = parseInt(x);
+        //   y = parseInt(y);
+          alert(x * y);
+        }
+   </script> 
+
+   <button onclick="SumFunc()">SUM</button>
+   <button onclick="MultiplyFunc()">MULTIPLY</button>
+
+   <div id="display"></div>
+</body>
+</html>

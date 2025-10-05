@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Registration Form</h3>
+    <form action="" name="rgs">
+        Name: <br>
+        <input type="text" name="fullname" placeholder="Enter your name"><br>
+        Gender: <br>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female <br>
+        District: <br>
+        <select name="district" id="">
+            <option value="">Select one</option>
+            <option>Dhaka</option>
+            <option>Sylhet</option>
+            <option>Rajshahi</option>
+            <option>Khulna</option>
+        </select> <br>
+        Address: <br>
+        <textarea name="address" id="" placeholder="Enter address"></textarea><br>
+        <button onclick="form_handle()" type="button">Submit</button>
+       
+    </form>
+
+
+    <script>
+        function form_handle(){
+            let fname = document.rgs.fullname.value;
+            let gender = document.rgs.gender.value;
+            alert(gender);
+        }
+    </script>
+    
+</body>
+</html>
