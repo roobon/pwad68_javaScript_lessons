@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Login Form</h3>
+    <form action="" name="loginForm">
+        <input type="text" name="fname" placeholder="Enter your name"><br>
+        <input type="password" name="passwd" placeholder="Enter Password"><br>
+        <input type="password" name="conf_passwd" placeholder="Enter Password Again"><br>
+        <button type="button" onclick="LoginValidation()">Login</button>
+    </form>
+
+    <script>
+        function LoginValidation(){
+            let fullName = document.loginForm.fname.value; 
+            let passWord = document.loginForm.passwd.value; 
+             let confPassword = document.loginForm.conf_passwd.value; 
+
+             let errMsg="";
+
+             if(fullName==""){
+                errMsg += "Enter Fullname\n";
+             } else if(fullName.length<5 || fullName.length>10)  {
+                 errMsg += "Fullname must be 5 to 10 characters\n";
+             }
+             if(passWord==""){
+                errMsg += "Enter Password\n";
+             } else if(passWord.length<4 || passWord.length>8)  {
+                 errMsg += "Password must be 4 to 8 length\n";
+             }
+             if(confPassword==""){
+               errMsg += "Enter Password Again\n";
+             } else if(passWord!=confPassword){
+                 errMsg += "Password Doesn't match\n";
+             }
+                       
+             if(errMsg!=""){
+                alert(errMsg);
+             } else {
+                alert("Login Successfull");
+             }
+        }
+    </script>
+</body>
+</html>
